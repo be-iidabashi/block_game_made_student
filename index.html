@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブロック崩しゲーム</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="gameCanvas"></canvas>
+    <div id="game-over-message" style="display: none;">
+      <h2>ゲームオーバー</h2>
+      <button onclick="restartGame()">もう一度プレイ</button>
+    </div>
+    <div id="win-message" style="display: none;">
+      <h2>ゲームクリア！</h2>
+      <p>スコア: <span id="final-score"></span></p>
+      <p>プレイ時間: <span id="final-time"></span></p>
+      <button onclick="restartGame()">もう一度プレイ</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
