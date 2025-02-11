@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブロック崩し</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        canvas {
+            background-color: #eee;
+            border: 2px solid #000;
+        }
+
+        #score {
+            position: absolute;
+            top: 20px;
+            font-size: 20px;
+            color: #000;
+        }
+
+        #game-over, #game-clear {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            color: #ff0000;
+        }
+
+        #game-title {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-title">ブロック崩し</div>
+    <div id="score">スコア: 0</div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="game-over">ゲームオーバー</div>
+    <div id="game-clear">ゲームクリア！</div>
+
+    <!-- 効果音 -->
+    <audio id="break-sound" src="break_sound.mp3" preload="auto"></audio>
+    <audio id="game-over-sound" src="game_over_sound.mp3" preload="auto"></audio>
+    
+    <!-- BGN（バックグラウンド音楽） -->
+    <audio id="background-music" src="background_music.mp3" preload="auto" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
